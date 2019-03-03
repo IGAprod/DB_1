@@ -1,0 +1,79 @@
+
+.div1{
+    width: 20%;
+    min-height: 529px;
+    background: #ccc;
+    float: left;
+    color: red;
+}
+.div2{
+    width: 80%;
+    min-height: 529px;
+    background: #dfff80;
+    margin-left: 20%;
+}
+.footer{
+    clear: left;
+    background: #000;
+    margin: -20px;
+    min-height: 50px;
+}
+
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+
+.tab-panels ul {
+    margin: 0px 0px 0px 20px;
+    padding: 0;
+}
+.tab-panels ul li {
+    list-style-type: none;
+    display: inline-block;
+    background: #000000;
+    margin: 0px;
+    padding: 3px 20px;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    font-weight: 200;
+    cursor: pointer;
+
+}
+
+.tab-panels ul li:hover {
+    color: #fff;
+    background: #666;
+}
+
+.tab-panels ul li.active {
+    color: #fff;
+    background: #666;
+}
+
+.tab-panels .panel {
+    display:none;
+    background: #ffffff;
+    margin: 0px 20px 20px 20px;
+    padding: 30px;
+    border-radius: 0 0 10px 10px;
+    min-height: 450px;
+}
+
+.tab-panels .panel.active {
+    display:block;
+}
+
+    .skin {
+    background: transparent;
+    font-size: 1.5em;
+    font-weight: 700;
+    max-width: 600px;
+        border: none;
+}
+
+.container{overflow:hidden;width:350px}
+.box{white-space:nowrap}
+.box div{width:40px;display:inline-block;}

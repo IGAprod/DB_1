@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="/js/phpjs/lab6.js"></script>
+
+</head>
+
+<body>
+
+
+<li><a href="http://localhost:8080/mainLabs">Назад</a></li>
+
+    <p style="margin-left:20px">Введите название таблицы</p>
+
+    <div >
+        <input type="text"  id="EnterQuery" placeholder="Enter query here"  style="margin-left: 20px"/>
+    </div>
+
+    <p style="margin-left:20px">Выберите таблицу</p>
+
+
+    <div>
+        <p><select  id = "select_table" style="margin-left: 20px" name="select_table_name">
+        </select></p>
+    </div>
+
+    <p style="margin-left:20px" >Выберите время</p>
+
+    <div>
+        <p><select  id = "select_time" style="margin-left: 20px" name="select_time_name">
+            <option value = before >before</option>
+            <option value = after >after</option>
+        </select></p>
+    </div>
+
+
+    <p style="margin-left:20px">Выберите событие</p>
+    <div>
+        <p><select  id = "select_event" style="margin-left: 20px" name="selevt_event_name ">
+            <option value = "insert" >insert</option>
+            <option value = "update" >update</option>
+            <option value = "delete" >delete</option>
+        </select></p>
+    </div>
+
+    <div>
+        <p><select  id = "select_each" name="select_each_name" style="margin-left: 20px">
+            <option value = "for each row" >for each row</option>
+            <<option value = "for each statement" >for each statement</option>
+        </select></p>
+    </div>
+
+
+    <div>
+
+        <textarea id="area_body" cols = "80" rows="15" style="margin-left: 20px"></textarea>
+    </div>
+
+    <button id = "go" type="SELECT" class="btn btn-default" style="margin-left:20px;">Создать</button>
+
+
+
+</body>

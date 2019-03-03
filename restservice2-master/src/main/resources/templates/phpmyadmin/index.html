@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/index2.css" />
+    <script src="/js/index2.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="/js/phpjs/tableList.js"></script>
+    <script src="/js/phpjs/selectvalue.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/main2.js"></script>
+    <script src="/js/hell.js"></script>
+    <script src="/js/buttons.js"></script>
+</head>
+<body>
+
+<div id = "left_side" class="div1">
+
+        <p><select  id = "dbtablelist" style="overflow-y: auto" class = "skin"  size = "20" width = 100px name="dbtablelist">
+
+        </select></p>
+</div>
+
+<div class="div2">
+
+    <div class="tab-panels">
+        <ul class="tabs">
+            <li rel="view" class="active">Обзор</li>
+            <li rel="sql">SQL</li>
+            <li rel="search">Поиск</li>
+            <li id = "insertTab" rel="put">Вставка</li>
+        </ul>
+
+        <div id="view" class="panel active">
+
+            <div class="container">
+                <div class="box">
+                    <div>
+                        <p><select  id = "delete_row" name="dbtablelist">
+                        </select></p>
+                    </div>
+
+                    <div>
+                        <button id = "delete_row_btn" type="delete_row_btn" class="btn btn-default" style="margin-left:0px; margin-right:5px">Удалить строку</button>
+                    </div>
+
+                    <div>
+                        <p><select  id = "delete_column" style="margin-left: 100px;" name="delete_column" >
+                        </select></p>
+                    </div>
+
+                    <div>
+                        <button id = "delete_column_btn" type="delete_column_btn" class="btn btn-default" style="margin-left:200px; margin-right:5px">Удалить столбец</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="pod_view">
+            </div>
+
+
+        </div>
+        <div id="sql" class="panel">
+
+            <div style="float: left; margin-right: 3px">
+                <button id = "SELECT" type="SELECT" class="btn btn-default" style="margin-left:15px; margin-right:5px">SELECT</button>
+                <button id = "INSERT" type="INSERT" class="btn btn-default" style="margin-left:15px; margin-right:5px">INSERT</button>
+                <button id = "UPDATE" type="UPDATE" class="btn btn-default" style="margin-left:15px; margin-right:5px">UPDATE</button>
+                <button id = "DELETE" type="DELETE" class="btn btn-default" style="margin-left:15px; margin-right:5px">DELETE</button>
+                <button id = "ALTER" type="ALTER" class="btn btn-default" style="margin-left:15px; margin-right:5px">ALTER</button>
+                <button id = "RENAME" type="RENAME" class="btn btn-default" style="margin-left:15px; margin-right:5px">RENAME</button>
+                <button id = "DROP" type="DROP" class="btn btn-default" style="margin-left:15px; margin-right:5px">DROP</button>
+                <button id = "CREATE" type="CREATE" class="btn btn-default" style="margin-left:15px; margin-right:5px">CREATE</button>
+                <button id = "TRUNCATE" type="TRUNCATE" class="btn btn-default" style="margin-left:15px; margin-right:5px">TRUNCATE</button>
+
+                <br>
+                <br>
+
+            </div>
+
+                <form class="form-inline" style="margin:0px 0px 0px 15px" id="customerForm"  >
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="EnterQuery" placeholder="Enter query here" size="113V"/>
+                    </div>
+                    <button type="submit" class="btn btn-default" style="margin-left:0px; margin-right:5px">Submit</button>
+                </form>
+
+
+            <div class="col-sm-7" id="postResultDiv" style="margin:15px 0px 0px 0px">
+
+            </div>
+            <div >
+                <button id="getAllPersonId" type="button" style="margin-left: 250px; margin-top: 15px;" class="btn btn-primary">Get All DATA</button>
+            </div>
+
+            <div id="getResultDiv1" style="padding:20px 10px 20px 20px">
+
+            </div>
+
+        </div>
+        <div id="search" class="panel">
+
+            <div>
+                Название таблицы:
+                <input type="text" id="newTableName" name="newTableName" value class="filterInput"/>
+            </div>
+
+             <pre style="margin-top: 10px;">Имя столбца               Тип столбца                 Размер </pre>
+
+            <table id="createNewTable" class="filterTable" >
+            <tr>
+                <td width="80"><input type="text" name="1columnName" value="" class="filterInput"></td>
+                <td width="54"><input type="text" name="1columnType" value="" class="filterInput"></td>
+                <td width="54"><input type="text" name="1columnLength" value="" class="filterInput"></td>
+            </tr>
+                <tr>
+                    <td width="80"><input type="text" name="2columnName" value="" class="filterInput"></td>
+                    <td width="54"><input type="text" name="2columnType" value="" class="filterInput"></td>
+                    <td width="54"><input type="text" name="2columnLength" value="" class="filterInput"></td>
+                </tr>
+                <tr>
+                    <td width="80"><input type="text" name="3columnName" value="" class="filterInput"></td>
+                    <td width="54"><input type="text" name="3columnType" value="" class="filterInput"></td>
+                    <td width="54"><input type="text" name="3columnLength" value="" class="filterInput"></td>
+                </tr>
+                <tr>
+                    <td width="80"><input type="text" name="4columnName" value="" class="filterInput"></td>
+                    <td width="54"><input type="text" name="4columnType" value="" class="filterInput"></td>
+                    <td width="54"><input type="text" name="4columnLength" value="" class="filterInput"></td>
+                </tr>
+
+            </table>
+
+
+            <button id = "createTable" type="createTable" class="btn btn-default" style="margin-top: 10px; margin-left:0px; margin-right:5px">Создать таблицу</button>
+
+
+
+        </div>
+        <div id="put" class="panel">
+
+
+            <div class="insertDiv" id="insertDiv">
+
+            </div>
+
+            <button id = "insertButton" type="createTable" class="btn btn-default" style="margin-top: 10px; margin-left:0px; margin-right:5px">Добавить строку</button>
+
+
+            <div class="addColumn" id="addColumnDiv" style="margin-top: 10px;">
+
+            </div>
+
+
+            <button id = "addColumnButton" type="createTable " class="btn btn-default" style="margin-top: 5px; margin-left:0px; margin-right:5px">Добавить Столбец</button>
+
+
+            <button id = "deleteTable" type="deleteTable " class="btn btn-default" style="margin-top: 5px; margin-left:0px; margin-right:5px">Удалить таблицу</button>
+
+
+            <div>
+                <p><select  id = "select_table" style="margin-left: 20px" name="select_table_name">
+                </select></p>
+            </div>
+
+            <p style="margin-left:20px">Введите название таблицы</p>
+
+            <div >
+                <input type="text"  id="EnterQuery123" placeholder="Enter query here"  style="margin-left: 20px"/>
+            </div>
+
+            <button id = "go" type="SELECT" class="btn btn-default" style="margin-left:20px;">Переименовать</button>
+
+        </div>
+    </div>
+
+</div>
+<div class="footer">
+
+    <li><a href="http://localhost:8080/mainLabs">5 6 7 лабы</a></li>
+
+</div>
+
+</body>
+</html>

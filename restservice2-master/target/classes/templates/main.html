@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database</title>
+    <meta charset ="utf-8"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/main2.js"></script>
+    <script src="/js/hell.js"></script>
+    <script src="/js/buttons.js"></script>
+
+</head>
+<body>
+
+<div class="image">
+    <img src="/js/logo_phpmyadmin_big.jpg" alt="альтернативный текст">
+</div>
+
+
+<div style="float: left; margin-right: 3px">
+    <button id = "SELECT" type="SELECT" class="btn btn-default" style="margin-left:20px; margin-right:5px">SELECT</button>
+    <button id = "INSERT" type="INSERT" class="btn btn-default" style="margin-left:20px; margin-right:5px">INSERT</button>
+    <button id = "UPDATE" type="UPDATE" class="btn btn-default" style="margin-left:20px; margin-right:5px">UPDATE</button>
+    <button id = "DELETE" type="DELETE" class="btn btn-default" style="margin-left:20px; margin-right:5px">DELETE</button>
+    <button id = "ALTER" type="ALTER" class="btn btn-default" style="margin-left:20px; margin-right:5px">ALTER</button>
+    <button id = "RENAME" type="RENAME" class="btn btn-default" style="margin-left:20px; margin-right:5px">RENAME</button>
+    <button id = "DROP" type="DROP" class="btn btn-default" style="margin-left:20px; margin-right:5px">DROP</button>
+    <button id = "CREATE" type="CREATE" class="btn btn-default" style="margin-left:20px; margin-right:5px">CREATE</button>
+    <button id = "TRUNCATE" type="TRUNCATE" class="btn btn-default" style="margin-left:20px; margin-right:5px">TRUNCATE</button>
+
+    <br>
+    <br>
+
+</div>
+
+<div>
+    <form class="form-inline" style="margin:20px 20px 20px 20px" id="customerForm">
+        <div class="form-group">
+            <input type="text" class="form-control" id="EnterQuery" placeholder="Enter query here" size="150V"/>
+        </div>
+        <button type="submit" class="btn btn-default" style="margin-left:20px; margin-right:5px">Submit</button>
+    </form>
+</div>
+
+
+
+
+<div class="col-sm-7" id="postResultDiv" style="margin:0px 0px 0px 5px">
+
+</div>
+<div style="clear: both;">
+    <button id="getAllPersonId" type="button" style="margin-left: 20px;" class="btn btn-primary">Get All DATA</button>
+</div>
+
+<div id="getResultDiv1" style="padding:20px 10px 20px 20px">
+
+</div>
+
+
+<div class="container">
+    <div class="col-sm-7" style="margin:0px 0px 0px -107px">
+
+
+        <div id="getResultDiv" style="padding:20px 10px 20px 50px">
+            <ul class="list-group">
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
